@@ -1,0 +1,5 @@
+# List item for *every* host
+list_items:
+  - name: "{{ inventory_hostname }}"
+    group: "{{ group_names }}"
+    interfaces: "{{ template_interfaces }}"

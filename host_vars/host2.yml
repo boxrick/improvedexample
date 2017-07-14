@@ -1,0 +1,5 @@
+---
+containers:
+  hosts:
+      host2:
+          ansible_host: 172.16.0.11

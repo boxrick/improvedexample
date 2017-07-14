@@ -1,0 +1,16 @@
+---
+# Network Interfaces
+template_interfaces:
+  - device: eth0
+    bootproto: static
+    ip: "{{ ansible_host }}"
+    gateway: "172.16.0.1"
+    netmask: "255.255.255.0"
+    dns_search: "example.domain.com"
+    dns_nameservers: "8.8.8.8"
+
+# Host List
+list_items:
+  - name: "{{ inventory_hostname }}"
+    group: "{{ group_names }}"
+    interfaces: "{{ template_interfaces }}"

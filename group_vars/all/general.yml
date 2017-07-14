@@ -1,0 +1,3 @@
+---
+#Combined list of all hosts for DNS, DHCP etc
+all_hosts_list: "{{ lookup('flattened', groups['all']|map('extract', hostvars, 'list_items')| list) }}"
